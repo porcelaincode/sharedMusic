@@ -1,0 +1,87 @@
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  /* background: linear-gradient(-45deg, #3c3485, #362f79, #30296b, #29245c); */
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.App {
+  text-align: center;
+  background-color: transparent;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.formContainer {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultContainer {
+  height: 60vh;
+  padding-top: 0.2em;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #ffffff55 #00000000; /* scroll thumb and track */
+}
+
+.resultContainer::-webkit-scrollbar {
+  width: 12px;
+}
+
+.resultContainer::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+.resultContainer::-webkit-scrollbar-thumb {
+  background-color: #ffffff55;
+  border-radius: 20px;
+  border: 3px solid #00000000;
+}
+
+.artistList {
+  width: 28ch;
+  flex-direction: row;
+}
+
+.footerComponent {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  font-size: medium;
+  text-align: center;
+}
+
+.headerComponent {
+  display: flex;
+  position: absolute;
+  top: 0;
+  font-family: "Quicksand";
+  padding: 1em;
+  font-size: medium;
+  text-align: center;
+  flex-direction: column;
+}
